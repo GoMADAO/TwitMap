@@ -1,12 +1,18 @@
 package test;
 
+import twitter4j.Location;
 import twitter4j.Place;
+import twitter4j.ResponseList;
 import twitter4j.StallWarning;
 import twitter4j.Status;
 import twitter4j.StatusDeletionNotice;
 import twitter4j.StatusListener;
+import twitter4j.Trend;
+import twitter4j.Trends;
+import twitter4j.Twitter;
 import twitter4j.TwitterAdapter;
 import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
 import twitter4j.TwitterListener;
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
@@ -27,13 +33,14 @@ public final class TwitterAPI {
      */
     public static void main(String[] args) throws TwitterException {
     	//just fill this
-    	 ConfigurationBuilder cb = new ConfigurationBuilder();
+    	 ConfigurationBuilder cb = new ConfigurationBuilder();    	 
+    	 
          cb.setDebugEnabled(true)
-           .setOAuthConsumerKey("xx")
-           .setOAuthConsumerSecret("xx")
-           .setOAuthAccessToken("xx")
-           .setOAuthAccessTokenSecret("xx");
-         
+           .setOAuthConsumerKey("mxtpBJiYQ7l8UzZTIX89kLj0W")
+           .setOAuthConsumerSecret("a6FxQi6qB91AM9UbhHpBRihVgt2T4grTqWFJdDuIByjPEvcprG")
+           .setOAuthAccessToken("3009085449-OnTm8hNFHRe1hA0Px3OhF0entdMgaPP0H4yaK1n")
+           .setOAuthAccessTokenSecret("mpvTsEtmndA9Z0weMFyWsGFfaSAIALtIsBmMvfP4zZHEz");
+                       
         TwitterStream twitterStream = new TwitterStreamFactory(cb.build()).getInstance();
         
 //        TwitterAdapter ta = new TwitterAdapter();
@@ -42,7 +49,9 @@ public final class TwitterAPI {
         StatusListener listener = new StatusListener() {
             @Override
             public void onStatus(Status status) {
-                System.out.println("@" + status.getUser().getScreenName() + " - " + status.getText()+" Place: "+status.getGeoLocation());
+            	if(status.getGeoLocation()!=null)
+            		System.out.println("ID:"+status.getGeoLocation()+ status.getCreatedAt()+ status.getId());
+                //System.out.println("@" + status.getUser().getScreenName() + " - " + status.getText()+" Place: "+status.getGeoLocation());
             }
             
             

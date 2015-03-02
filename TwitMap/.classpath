@@ -23,5 +23,6 @@
 	<classpathentry kind="lib" path="/Users/apple/Documents/eclipse/prjsources/twitter4j-4.0.2/lib/twitter4j-examples-4.0.2.jar"/>
 	<classpathentry kind="lib" path="/Users/apple/Documents/eclipse/prjsources/twitter4j-4.0.2/lib/twitter4j-media-support-4.0.2.jar"/>
 	<classpathentry kind="lib" path="/Users/apple/Documents/eclipse/prjsources/twitter4j-4.0.2/lib/twitter4j-stream-4.0.2.jar"/>
+	<classpathentry kind="lib" path="/Users/apple/Documents/eclipse/prjsources/mysql-connector-java-5.1.34/mysql-connector-java-5.1.34-bin.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
