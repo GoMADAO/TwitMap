@@ -35,21 +35,21 @@ public class InitDB {
 		    // Create a table and write two rows
 		    setupStatement = conn.createStatement();
 		    String createTable1 = "CREATE TABLE info ("
-		    		+ "id varchar(50) not null primary key, "
-		    		+ "time datetime not null, "
-		    		+ "lati varchar(20), "
-		    		+ "longi varchar(20)"
+		    		+ "id varchar(50) NOT NULL PRIMARY KEY, "
+		    		+ "time DATETIME NOT NULL, "
+		    		+ "lati VARCHAR(20), "
+		    		+ "longi VARCHAR(20)"
 		    		+");";
 		    
 		    String createTable3 = "CREATE TABLE keyword ("
-		    		+ "kid int not null primary key AUTO_INCREMENT, "
-		    		+ "kword varchar(50) not null,"
+		    		+ "kid INT NOT NULL PRIMARY KEY AUTO_INCREMENT, "
+		    		+ "kword VARCHAR(50) NOT NULL,"
 		    		+ "UNIQUE (kword)"
 		    		+ ");";
 		    
 		    String createTable2 = "CREATE TABLE twit_keyword ("
-		    		+ "twit_id varchar(50) not null references info(id), "
-		    		+ "key_id int not null references keyword(kid)"
+		    		+ "twit_id VARCHAR(50) NOT NULL REFERENCES info(id), "
+		    		+ "key_id INT NOT NULL REFERENCES KEYWORD(kid)"
 		    		+ ");";
 		    
 		    setupStatement.addBatch(createTable1);

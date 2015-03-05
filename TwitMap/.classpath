@@ -25,5 +25,6 @@
 	<classpathentry kind="lib" path="/Users/apple/Documents/eclipse/prjsources/twitter4j-4.0.2/lib/twitter4j-stream-4.0.2.jar"/>
 	<classpathentry kind="lib" path="/Users/apple/Documents/eclipse/prjsources/mysql-connector-java-5.1.34/mysql-connector-java-5.1.34-bin.jar"/>
 	<classpathentry kind="lib" path="/Users/apple/Documents/eclipse/prjsources/javax.websocket-api-1.0-rc5.jar"/>
+	<classpathentry kind="lib" path="/Users/apple/Documents/eclipse/prjsources/json.org.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

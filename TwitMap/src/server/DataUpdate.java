@@ -24,6 +24,11 @@ public class DataUpdate {
 	private static Connection conn = DBConn.getConnection();
 	private static HashMap<String, Integer> keywords = new HashMap<String, Integer>();
 	
+	public static boolean isInRange(double low, double hi, double val){
+		if (Double.compare(low, val)<=0 && Double.compare(val, hi)<=0)
+			return true;
+		return false;		
+	}
 	
 	public static void getKeywords(){
 		String sql = "SELECT * FROM keyword;";
@@ -77,7 +82,8 @@ public class DataUpdate {
             			String location=m.replaceAll("");
             			String[] l = location.split(", ");
             			System.out.println(l[0]);
-            			            			
+            			      
+            			
             			String time =""+status.getCreatedAt();
             			String s[] = time.split(" ");
             			String datetime = s[5]+"-"+s[1]+"-"+s[2]+" "+s[3];
@@ -109,15 +115,12 @@ public class DataUpdate {
                 				
                 			}
             			}
-            			
-            			
+            			           			
             			
             		}
             		
             		
             	}
-            		
-                //System.out.println("@" + status.getUser().getScreenName() + " - " + status.getText()+" Place: "+status.getGeoLocation());
             }
                         
             @Override
