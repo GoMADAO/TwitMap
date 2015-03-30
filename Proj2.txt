@@ -1,0 +1,16 @@
+Amazon SQS:
+	1.buffer between consumer and producer
+	2.does not guarantee fist in first out 
+
+
+There are three main actors in the overall system:
+
+a.The components of your distributed system
+b.Queues
+c.Messages in the queues
+
+
+Amazon SNS:
+	Sending messages to subscribing endpoint
+
+Three parts: publishers and subscribers, topic
